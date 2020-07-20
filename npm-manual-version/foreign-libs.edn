@@ -1,0 +1,7 @@
+{ :foreign-libs [{:file        "node_modules/three/build/three.module.js"
+                  :provides    ["THREE"]
+                  :module-type :es6}
+                 {:file        "node_modules/three/examples/jsm/controls/OrbitControls.js"
+                  :provides    ["THREE.controls.OrbitControls"]
+                  :module-type :es6
+                  :requires    ["THREE"]}]}

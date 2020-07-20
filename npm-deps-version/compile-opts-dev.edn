@@ -1,0 +1,8 @@
+{
+ :main          demo
+ :output-dir    "out"
+ :output-to     "out/main.js"
+ :optimizations :none
+ :npm-deps      {"three" "0.118.3"}
+ :install-deps  true
+}

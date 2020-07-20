@@ -1,0 +1,9 @@
+{
+ :main          demo
+ :output-dir    "out"
+ :output-to     "out/main.js"
+ ;; At the time of writing, advanced optimizations are leading to a runtime
+ ;; error: Uncaught TypeError: g is undefined.
+ ;;:optimizations :advanced
+ :optimizations :simple
+}

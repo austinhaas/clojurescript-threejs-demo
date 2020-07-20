@@ -1,0 +1,6 @@
+{
+ :main          demo
+ :output-dir    "out"
+ :output-to     "out/main.js"
+ :optimizations :none
+}
