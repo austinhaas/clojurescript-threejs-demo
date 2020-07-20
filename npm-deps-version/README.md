@@ -1,6 +1,6 @@
 # ClojureScript + three.js (using :npm-deps)
 
-See the [main README](../) for more info.
+See the [main README](../README.md) for more info.
 
 ### 1. Change to this project directory.
 ```
