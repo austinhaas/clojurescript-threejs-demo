@@ -4,9 +4,12 @@
 This repository contains several different ways of bringing three.js into a
 ClojureScript project.
 
-The motivation for this investigation was to facilitate switching from the
-release version of three.js to the dev version to check if an issue had already
-been fixed. (It had.)
+* [ClojureScript](https://clojurescript.org/)
+* [three.js](https://threejs.org/)
+
+## Dependencies
+
+* [Clojure CLI](https://clojure.org/guides/deps_and_cli)
 
 ## Google Closure Compiler and three.js
 
@@ -20,12 +23,11 @@ Future versions shouldn't have this issue.
 
 ### :optimizations :advanced
 
-I haven't been able to successfully run a build that compiles three.js with
-advanced optimizations.
+I have not successfully compiled three.js with advanced optimizations.
 
 ## Versions
 
-### [CDN version](cdn-version/README.md)
+### [CDN version](cdn-version)
 
 Install three.js from a CDN on page load.
 
@@ -43,7 +45,7 @@ Install three.js from a CDN on page load.
 * Throws some errors, but they seem benign.
 * Not sure I'm wiring this up correctly.
 
-### [Locally installed version](local-version/README.md)
+### [Locally installed version](local-version)
 
 This version installs the three.js artifacts locally, so that they can be used
 to generate an externs file.
@@ -66,7 +68,7 @@ haven't got it to work at all.
   especially annoying when you are using multiple modules from the examples
   directory.
 
-### [Source version](source-version/README.md)
+### [Source version](source-version)
 
 If you are working heavily with three.js, you probably want easy access to the
 source repo, and the ability to run the dev version or any release.
@@ -87,7 +89,7 @@ This is what I currently use.
   dependencies in node_modules. This results in error messages and a delay, but
   otherwise seems benign.
 
-### [Source + Webpack version](source-webpack-version/README.md)
+### [Source + Webpack version](source-webpack-version)
 
 Same as above, but bundles everything with webpack.
 
@@ -102,7 +104,7 @@ Same as above, but bundles everything with webpack.
 
 * Same as above.
 
-### [Manual npm installed version](npm-manual-version/README.md)
+### [Manual npm installed version](npm-manual-version)
 
 Manually install three.js using npm.
 

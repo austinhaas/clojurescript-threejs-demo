@@ -1,17 +1,19 @@
 # ClojureScript + three.js (from npm)
 
-1. Change to this project directory.
+See the [main README](../) for more info.
+
+### 1. Change to this project directory.
 ```
 cd npm-manual-version
 ```
 
-2. Install npm, if it isn't installed.
+### 2. Install npm, if it isn't installed.
 
-3. `echo "{}" > package.json`
+### 3. `echo "{}" > package.json`
 
-4. `npm install --save three`
+### 4. `npm install --save three`
 
-5. Compile. Start a REPL. Launch a browser. Watch for changes.
+### 5. Compile. Start a REPL. Launch a browser. Watch for changes.
 ```
 ./run-dev-process-easy.sh
 ```
@@ -47,12 +49,11 @@ or touch controls.
 You should also see a prompt at the REPL, but if you saw the errors above, it
 may not be visible. Hit enter for a fresh prompt.
 
-4. Enter commands at the repl.
+### 6. Enter commands at the repl.
 
 ```
 (in-ns 'demo)
 (add-scene!)
-
 ```
 
-5. Read the files for more commentary.
+### 7. Read the files for more commentary.

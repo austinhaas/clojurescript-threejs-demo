@@ -1,13 +1,13 @@
 # ClojureScript + three.js (from source)
 
-See the [main README](../README.md) for more info.
+See the [main README](../) for more info.
 
-1. Change to this project directory.
+### 1. Change to this project directory.
 ```
 cd source-version
 ```
 
-2. Clone the three.js repo.
+### 2. Clone the three.js repo.
 ```
 git clone https://github.com/mrdoob/three.js.git
 ```
@@ -21,7 +21,7 @@ a released version.
 > trailing comma in arguments list". To fix it, just delete the trailing comma
 > on the line in the file mentioned.
 
-3. Compile. Start a REPL. Launch a browser. Watch for changes.
+### 3. Compile. Start a REPL. Launch a browser. Watch for changes.
 ```
 ./run-dev-process-easy.sh
 ```
@@ -52,12 +52,11 @@ You should also see a prompt at the REPL, but if you saw the errors above, it
 may not be visible. Hit enter for a fresh prompt. It might take a couple
 seconds.
 
-4. Enter commands at the repl.
+### 4. Enter commands at the repl.
 
 ```
 (in-ns 'demo)
 (add-scene!)
-
 ```
 
-5. Read the files for more commentary.
+### 5. Read the files for more commentary.

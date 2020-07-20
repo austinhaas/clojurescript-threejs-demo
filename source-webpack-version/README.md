@@ -1,13 +1,13 @@
 # ClojureScript + three.js (from source) + webpack
 
-See the [main README](../README.md) for more info.
+See the [main README](../) for more info.
 
-1. Change to this project directory.
+### 1. Change to this project directory.
 ```
 cd source-webpack-version
 ```
 
-2. Clone the three.js repo.
+### 2. Clone the three.js repo.
 ```
 git clone https://github.com/mrdoob/three.js.git
 ```
@@ -21,13 +21,13 @@ a released version.
 > trailing comma in arguments list". To fix it, just delete the trailing comma
 > on the line in the file mentioned.
 
-3. Install npm, if it isn't already installed.
+### 3. Install npm, if it isn't already installed.
 
-4. `echo "{}" > package.json`
+### 4. `echo "{}" > package.json`
 
-5. `npm install --save-dev webpack webpack-cli`
+### 5. `npm install --save-dev webpack webpack-cli`
 
-6. Compile. Start a REPL. Launch a browser. Watch for changes.
+### 6. Compile. Start a REPL. Launch a browser. Watch for changes.
 ```
 ./run-dev-process-easy.sh
 ```
@@ -57,12 +57,11 @@ or touch controls.
 You should also see a prompt at the REPL, but if you saw the errors above, it
 may not be visible. Hit enter for a fresh prompt.
 
-7. Enter commands at the repl.
+### 7. Enter commands at the repl.
 
 ```
 (in-ns '[demo])
 (add-scene!)
-
 ```
 
-8. Read the files for more commentary.
+### 8. Read the files for more commentary.
