@@ -5,7 +5,6 @@
 # with a different webserver.
 
 clj --main cljs.main \
-    --compile-opts foreign-libs.edn \
     --compile-opts compile-opts-advanced.edn \
     --compile \
     --serve
