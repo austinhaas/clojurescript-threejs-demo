@@ -13,6 +13,4 @@ THREE.TorusGeometry;
 THREE.MeshStandardMaterial;
 THREE.Mesh;
 THREE.PlaneGeometry;
-THREE.MeshStandardMaterial;
-THREE.Mesh;
 THREE.Fog;
