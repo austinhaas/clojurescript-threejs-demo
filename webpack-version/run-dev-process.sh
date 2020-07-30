@@ -14,7 +14,6 @@
 clj -A:socket \
     --main cljs.main \
     --watch src \
-    --compile-opts foreign-libs.edn \
     --compile-opts compile-opts-dev.edn \
     --compile
 

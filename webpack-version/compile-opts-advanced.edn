@@ -1,13 +1,11 @@
 {
  :main            demo
- ;; At the time of writing, advanced optimizations are leading to a runtime
- ;; error: Uncaught TypeError: g is undefined.
- ;;:optimizations :advanced
- :optimizations   :simple
+ :optimizations   :advanced
  :output-dir      "out"
  :output-to       "out/index.js"
  :target          :bundle
  :bundle-cmd      {:none    ["npx" "webpack" "out/index.js" "-o" "out/main.js" "--mode=development"]
                    :default ["npx" "webpack" "out/index.js" "-o" "out/main.js"]}
  :closure-defines {cljs.core/*global* "window"} ;; needed for advanced
+ :infer-externs   true
 }
