@@ -23,7 +23,6 @@ Alternatively, you could download and serve the three.js files.
 #### Pros
 
 * Your code (not three.js) can be compiled with advanced optimizations.
-* Easiest version to test.
 
 #### Cons
 
@@ -49,7 +48,7 @@ Use webpack to package the dependencies.
 
 #### Cons
 
-* I don't know how to reference the modules in the three.js examples directory.
+* npm is required.
 
 ### [:npm-deps version](npm-deps-version/README.md)
 
@@ -62,6 +61,6 @@ Use compiler options to specify the three.js dependency.
 
 #### Cons
 
-* I don't know how to reference the modules in the three.js examples directory.
+* npm is required.
 * I can't get this to work with advanced optimizations. (The documentation
   says this may not work: https://clojurescript.org/reference/compiler-options#npm-deps).
