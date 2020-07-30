@@ -1,10 +1,7 @@
 (ns demo
   (:require
    [three]
-   ;;[OrbitControls]
-   ))
-
-(set! *warn-on-infer* true)
+   ["three/examples/jsm/controls/OrbitControls" :as oc]))
 
 (js/console.log (str "three.js " three/REVISION))
 
@@ -44,8 +41,8 @@
 
 ;;; Add something from the examples directory
 
-;;(def ^js controls (OrbitControls. camera (.-domElement renderer)))
-;;(.update controls)
+(def ^js controls (oc/OrbitControls. camera (.-domElement renderer)))
+(.update controls)
 
 (defn add-scene!
   "Adds more things to the global scene. You can call this function from the REPL,
