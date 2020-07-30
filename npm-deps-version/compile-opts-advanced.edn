@@ -2,8 +2,8 @@
  :main          demo
  :output-dir    "out"
  :output-to     "out/main.js"
- ;; At the time of writing, advanced optimizations are leading to a runtime
- ;; error: Uncaught TypeError: g is undefined.
- ;;:optimizations :advanced
- :optimizations :simple
+ :npm-deps      {"three" "0.119.0"}
+ :install-deps  true
+ :optimizations :advanced
+ :infer-externs true
 }

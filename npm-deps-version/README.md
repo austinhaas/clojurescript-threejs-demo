@@ -12,20 +12,11 @@ cd npm-deps-version
 ./run-dev-process-easy.sh
 ```
 
-> Note that version r118 of three.js, released at the time of this writing, will
-> not work without a very small modification, due to an incompatibility with
-> Google Closure. The error is "ERROR: JSC_PARSE_ERROR. Parse error. Invalid
-> trailing comma in arguments list". To fix it, just delete the trailing comma
-> on the line in the file mentioned.
-
-> To prevent this change from being overwritten, you must also edit
-> compile-opts-dev.edn and set `:install-deps false`.
-
 The browser should open and display a spinning green box.
 
 ~~If you select the browser, you can move the camera using the arrow keys,
-mouse, or touch controls.~~ **I haven't figured out how to load modules from the
-three.js example directory.**
+mouse, or touch controls.~~ I can't figure out how to import modules from the
+three.js examples folder.
 
 You should also see a prompt at the REPL, but if you saw the errors above, it
 may not be visible. Hit enter for a fresh prompt.
