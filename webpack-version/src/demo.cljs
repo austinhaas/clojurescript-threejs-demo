@@ -13,10 +13,10 @@
 (def ^js scene (three/Scene.))
 
 (def ^js camera (three/PerspectiveCamera. 75
-                                      (/ (.-innerWidth  js/window)
-                                         (.-innerHeight js/window))
-                                      0.1
-                                      1000))
+                                          (/ (.-innerWidth  js/window)
+                                             (.-innerHeight js/window))
+                                          0.1
+                                          1000))
 
 (def ^js renderer (three/WebGLRenderer.))
 
