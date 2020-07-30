@@ -44,39 +44,41 @@
 
   ;;; Add something from the examples directory
   (def ^js controls (OrbitControls. camera (.-domElement renderer)))
-  (.update controls))
+  (.update controls)
 
-(defn add-scene!
-  "Adds more things to the global scene. You can call this function from the REPL,
+  (defn add-scene!
+    "Adds more things to the global scene. You can call this function from the REPL,
     or, if you can evaluate code from your editor, you can try evaluating each
     expression in order."
-  []
+    []
 
-  (.set (.-position camera) 5 5 5)
-  (.lookAt camera 0 0 0)
+    (.set (.-position camera) 5 5 5)
+    (.lookAt camera 0 0 0)
 
-  (def ^js grid-helper (THREE.GridHelper. 10 10))
-  (.add scene grid-helper)
+    (def ^js grid-helper (THREE.GridHelper. 10 10))
+    (.add scene grid-helper)
 
-  (def ^js axes-helper (THREE.AxesHelper. 5))
-  (.add scene axes-helper)
+    (def ^js axes-helper (THREE.AxesHelper. 5))
+    (.add scene axes-helper)
 
-  (def ^js light (THREE.DirectionalLight. 0xffffff 1))
-  (.add scene light)
+    (def ^js light (THREE.DirectionalLight. 0xffffff 1))
+    (.add scene light)
 
-  (def ^js torus-geometry (THREE.TorusGeometry. 1 0.4 80 60))
-  (def ^js torus-material (THREE.MeshStandardMaterial. (clj->js {:color 0x3333ff})))
-  (def ^js torus (THREE.Mesh. torus-geometry torus-material))
-  (.add scene torus)
-  (.set (.-position torus) -2 1 -1)
-  (.set (.-rotation torus) -0.8 0.6 0)
+    (def ^js torus-geometry (THREE.TorusGeometry. 1 0.4 80 60))
+    (def ^js torus-material (THREE.MeshStandardMaterial. (clj->js {:color 0x3333ff})))
+    (def ^js torus (THREE.Mesh. torus-geometry torus-material))
+    (.add scene torus)
+    (.set (.-position torus) -2 1 -1)
+    (.set (.-rotation torus) -0.8 0.6 0)
 
-  (def ^js plane-geometry (THREE.PlaneGeometry. 8 8))
-  (def ^js plane-material (THREE.MeshStandardMaterial. (clj->js {:color 0xff3333})))
-  (def ^js plane (THREE.Mesh. plane-geometry plane-material))
-  (.add scene plane)
-  (.set (.-position plane) -1 1 -2)
-  (.set (.-rotation plane) -0.8 0.5 0)
+    (def ^js plane-geometry (THREE.PlaneGeometry. 8 8))
+    (def ^js plane-material (THREE.MeshStandardMaterial. (clj->js {:color 0xff3333})))
+    (def ^js plane (THREE.Mesh. plane-geometry plane-material))
+    (.add scene plane)
+    (.set (.-position plane) -1 1 -2)
+    (.set (.-rotation plane) -0.8 0.5 0)
 
-  (def ^js fog (THREE.Fog. 0x333333 1 30))
-  (set! (.-fog scene) fog))
+    (def ^js fog (THREE.Fog. 0x333333 1 30))
+    (set! (.-fog scene) fog))
+
+  (add-scene!))
