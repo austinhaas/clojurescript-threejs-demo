@@ -10,20 +10,7 @@ ClojureScript project.
 ## Dependencies
 
 * [Clojure CLI](https://clojure.org/guides/deps_and_cli)
-
-## Google Closure Compiler and three.js
-
-### three.js r118
-
-The version of three.js (r118) that is currently released conflicts with the
-Google Closure Compiler. One comma needs to be removed. Workarounds are
-described in the steps for each build.
-
-Future versions shouldn't have this issue.
-
-### :optimizations :advanced
-
-I have not successfully compiled three.js with advanced optimizations.
+* [npm](https://www.npmjs.com/) (not needed for the CDN version)
 
 ## Versions
 
@@ -31,112 +18,50 @@ I have not successfully compiled three.js with advanced optimizations.
 
 Install three.js from a CDN on page load.
 
+Alternatively, you could download and serve the three.js files.
+
 #### Pros
 
-* Works with the current release of three.js (r118).
+* Your code (not three.js) can be compiled with advanced optimizations.
 * Easiest version to test.
 
 #### Cons
 
-* I haven't figured out how to make it work with :simple optimizations.
-* Advanced optimizations won't work, unless you supply externs.
-* three.js isn't as nicely integrated into ClojureScript as the other versions.
-* three.js doesn't pass through the Google Closure compiler, so no optimizations there.
-* Throws some errors, but they seem benign.
-* Not sure I'm wiring this up correctly.
+* An externs file is required to compile with advanced optimizations. This file
+  must be updated when new parts of three.js are referenced.
+* The clojurescript code must be set up to run after the modules are loaded.
+* The three.js modules must be stored globally (e.g., by adding them to `window`).
+* The modules must be referenced in the global scope, as opposed to referencing
+  them via `require` or `import`.
+* The three.js files are not optimized.
 
-### [Locally installed version](local-version)
+### [Webpack version](source-webpack-version)
 
-This version installs the three.js artifacts locally, so that they can be used
-to generate an externs file.
-
-**This isn't working right now. The paths to the modules seem to be messed up.**
-
-This is what I did before three.js moved to modules. It worked ok, but I had to
-manually add additional externs. I haven't included those here, because I
-haven't got it to work at all.
+Use webpack to package the dependencies.
 
 #### Pros
 
-* IIUC, you could compile your code with advanced optimizations, but leave
-  three.js alone.
+* The three.js dependency is installed and managed with `npm`.
+* Modules can be referenced via `require`.
+* Everything can be compiled with advanced optimizations.
+* Doesn't seem to need an externs file.
+* Uses webpack.
 
 #### Cons
 
-* Not working.
-* You have to manually keep your three.js dependencies up to date. This is
-  especially annoying when you are using multiple modules from the examples
-  directory.
-
-### [Source version](source-version)
-
-If you are working heavily with three.js, you probably want easy access to the
-source repo, and the ability to run the dev version or any release.
-
-The downside is every developer needs to install it manually when they first set
-up the project.
-
-This is what I currently use.
-
-#### Pros
-
-* Easily switch between release versions of three.js and dev version.
-* Everything passes through the Closure compiler.
-
-#### Cons
-
-* There appears to be an issue where the clojurescript compiler tries to resolve
-  dependencies in node_modules. This results in error messages and a delay, but
-  otherwise seems benign.
-
-### [Source + Webpack version](source-webpack-version)
-
-Same as above, but bundles everything with webpack.
-
-(I don't know what value that adds.)
-
-#### Pros
-
-* Same as above.
-* Incorporates webpack, if that is desired.
-
-#### Cons
-
-* Same as above.
-
-### [Manual npm installed version](npm-manual-version)
-
-Manually install three.js using npm.
-
-This seems like a good way to get three.js, especially if you already have npm
-installed.
-
-The steps walk through installing three.js as the original developer. IIUC, you
-would want to commit package.json and package-lock.json and then users can just
-run `npm install` to install three.js.
-
-#### Pros
-
-* Use npm to manage the three.js dependencies.
-
-#### Cons
-
-* The current released version of three.js doesn't compile without modification.
-* Same clojurescript compiler issue as above.
+* I don't know how to reference the modules in the three.js examples directory.
 
 ### [:npm-deps version](npm-deps-version/README.md)
 
-I haven't figured out how to include modules from the three.js examples directory.
-
-If that is possible, then this might be the best way for users of your library
-to get three.js (after the issue in r118 is resolved).
+Use compiler options to specify the three.js dependency.
 
 #### Pros
 
 * Automatically installs three.js.
+* Modules can be referenced via `require`.
 
 #### Cons
 
-* The curent released version of three.js (r118) doesn't compile without modification.
-* `:install-deps true` will cause any changes made to node_modules to be overwritten.
-* I can't figure out how to reference modules in the three.js example directory.
+* I don't know how to reference the modules in the three.js examples directory.
+* I can't get this to work with advanced optimizations. (The documentation
+  says this may not work: https://clojurescript.org/reference/compiler-options#npm-deps).
