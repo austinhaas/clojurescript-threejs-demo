@@ -25,8 +25,9 @@ npm install --save three
 
 The browser should open and display a spinning green box.
 
-If you select the browser, you can move the camera using the arrow keys, mouse,
-or touch controls.
+~~If you select the browser, you can move the camera using the arrow keys,
+mouse, or touch controls.~~ I can't figure out how to import modules from the
+three.js examples folder.
 
 You should also see a prompt at the REPL, but if you saw the errors above, it
 may not be visible. Hit enter for a fresh prompt.
