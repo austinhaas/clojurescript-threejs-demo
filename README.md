@@ -34,7 +34,7 @@ Alternatively, you could download and serve the three.js files.
   them via `require` or `import`.
 * The three.js files are not optimized.
 
-### [Webpack version](source-webpack-version)
+### [Webpack version](webpack-version)
 
 Use webpack to package the dependencies.
 
@@ -50,7 +50,7 @@ Use webpack to package the dependencies.
 
 * npm is required.
 
-### [:npm-deps version](npm-deps-version/README.md)
+### [:npm-deps version](npm-deps-version)
 
 Use compiler options to specify the three.js dependency.
 
