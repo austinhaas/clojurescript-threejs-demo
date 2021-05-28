@@ -1,9 +1,9 @@
+;; https://clojurescript.org/reference/compiler-options
 {
  :main          demo
  :output-dir    "out"
  :output-to     "out/main.js"
- :npm-deps      {"three" "0.119.0"}
- :install-deps  true
  :optimizations :advanced
+ :externs       ["config/externs.js"]
  :infer-externs true
 }

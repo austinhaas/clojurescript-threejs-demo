@@ -4,7 +4,7 @@
    [cljs.repl :as repl]
    [cljs.repl.browser :as browser]))
 
-(def compile-opts-files ["compile-opts-dev.edn"])
+(def compile-opts-files ["config/compile-opts-dev.edn"])
 
 (defn browser-repl
   "Launch a ClojureScript browser REPL, but don't launch the browser. Uses

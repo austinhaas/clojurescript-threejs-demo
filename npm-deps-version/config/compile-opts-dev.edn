@@ -1,3 +1,4 @@
+;; https://clojurescript.org/reference/compiler-options
 {
  :main          demo
  :output-dir    "out"

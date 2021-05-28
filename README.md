@@ -1,8 +1,8 @@
 
 # ClojureScript + three.js demo projects
 
-This repository contains several different ways of bringing three.js into a
-ClojureScript project.
+This repository shows different ways of bringing three.js into a ClojureScript
+project.
 
 * [ClojureScript](https://clojurescript.org/)
 * [three.js](https://threejs.org/)
@@ -10,7 +10,9 @@ ClojureScript project.
 ## Dependencies
 
 * [Clojure CLI](https://clojure.org/guides/deps_and_cli)
-* [npm](https://www.npmjs.com/) (not needed for the CDN version)
+* [npm](https://www.npmjs.com/) (Not needed for the CDN version.)
+* [Python](https://www.python.org/) (Optional. For launching a webserver.)
+* [GNU Make](https://www.gnu.org/software/make/) (Optional. For running CLI commands.)
 
 ## Versions
 
@@ -18,7 +20,7 @@ ClojureScript project.
 
 Install three.js from a CDN on page load.
 
-Alternatively, you could download and serve the three.js files.
+Alternatively, you could download and host the three.js files.
 
 #### Pros
 
