@@ -27,8 +27,8 @@ build : ## Compile with advanced optimizations.
 	--compile
 
 .PHONY : serve
-serve : ## Launch a webserver on 0.0.0.0:4000. (Requires python.)
-	python -m http.server 4000
+serve : ## Launch a webserver on 0.0.0.0:4000. (Requires python3.)
+	python3 -m http.server 4000
 
 pom.xml : deps.edn ## Generate pom.xml.
 	clj -Spom
