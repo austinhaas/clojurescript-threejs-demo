@@ -12,6 +12,15 @@ uninstall-deps : ## Remove dependencies.
 	rm package-lock.json
 	rm -rf node_modules
 
+.PHONY : dev-watch
+dev-watch :  ## Build with dev settings and watch src for changes.
+	clj \
+	-M \
+	--main cljs.main \
+	--watch src \
+	--compile-opts config/compile-opts-dev.edn \
+	--compile
+
 .PHONY : repl-server
 repl-server : ## Compile with dev options. Serve socket-based REPL on port 5555. Recompile when src changes.
 	clj \
