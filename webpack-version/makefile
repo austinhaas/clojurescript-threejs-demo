@@ -4,7 +4,7 @@ package.json :
 .PHONY : install-deps
 install-deps : package.json ## Install dependencies. (Requires npm.)
 	npm install --save-dev webpack webpack-cli
-	npm install --save three
+	npm install --save three@0.165.0
 
 .PHONY : uninstall-deps
 uninstall-deps : ## Remove dependencies.
