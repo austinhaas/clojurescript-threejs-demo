@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ClojureScript three.js Demo</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@v0.165.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.165.0/examples/jsm/"
+        }
+      }
+    </script>
   </head>
   <body onload="demo.start()">
     <div id="app"></div>
     <script type="module">
-      import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.128.0-SK0zhlI7UZNd0gIQdpJa/mode=imports/optimized/three.js';
-      import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.128.0-SK0zhlI7UZNd0gIQdpJa/examples/jsm/controls/OrbitControls.js';
+      import * as THREE from 'three';
+      import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
       window.THREE = THREE;
       window.OrbitControls = OrbitControls;
     </script>
