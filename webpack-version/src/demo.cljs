@@ -1,7 +1,7 @@
 (ns demo
   (:require
-   [three]
-   ["three/examples/jsm/controls/OrbitControls" :as oc]))
+   ["three" :as three]
+   ["three/examples/jsm/controls/OrbitControls" :refer [OrbitControls]]))
 
 (js/console.log (str "three.js " three/REVISION))
 
@@ -41,7 +41,7 @@
 
 ;;; Add something from the examples directory
 
-(def ^js controls (oc/OrbitControls. camera (.-domElement renderer)))
+(def ^js controls (OrbitControls. camera (.-domElement renderer)))
 (.update controls)
 
 (defn add-scene!
