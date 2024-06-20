@@ -27,12 +27,6 @@ or touch controls.
 
 You should also see a prompt at the REPL.
 
-### 3. Enter commands at the repl.
-```clojure
-(in-ns 'demo)
-(add-scene!)
-```
-
 ## Production Build
 
 ### 1. Change to this project directory.
